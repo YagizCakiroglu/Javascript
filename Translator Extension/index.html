@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modern Translator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="app-header">
+            <h1>Translator</h1>
+        </div>
+        
+        <div class="input-section">
+            <textarea id="inputText" rows="6" placeholder="Type text here..." class="input-area"></textarea>
+        </div>
+
+        <div class="language-selector">
+            <div class="lang-group">
+                <select id="translateFrom" class="lang-select">
+                    <option value="en">English</option>
+                </select>
+                <div class="swap-icon">↔️</div>
+                <select id="translateTo" class="lang-select">
+                    <option value="es">Spanish</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="translateBtn" class="primary-btn">Translate</button>
+            <button id="speakBtn" class="secondary-btn">
+                <span class="icon">🔊</span>
+            </button>
+        </div>
+
+        <div id="outputText" class="output-area" aria-readonly="true"></div>
+    </div>
+
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
