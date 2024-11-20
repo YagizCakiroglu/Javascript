@@ -1,0 +1,140 @@
+/* Genel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Kart Resmi */
+.card .card-image {
+    height: 200px;
+    background-color: #e0e0e0;
+    background-image: url('https://via.placeholder.com/350x200');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Kart Yazı Alanı */
+.card .card-text {
+    padding: 15px;
+}
+
+.card .card-text .date {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.card .card-text h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card .card-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Kart İstatistikleri */
+.card .card-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.card .card-stats .stats,
+.card .card-stats .stat {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card .card-stats .value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card .card-stats .type {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.card .card-stats .border {
+    border-left: 1px solid #f0f0f0;
+    padding-left: 15px;
+}
+
+/* Hover Efekti */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .card .card-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .card .card-text p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .card .card-text h2 {
+        font-size: 1rem;
+    }
+
+    .card .card-text p {
+        font-size: 0.9rem;
+    }
+
+    .card .card-stats .value {
+        font-size: 1rem;
+    }
+
+    .card .card-stats .type {
+        font-size: 0.8rem;
+    }
+}

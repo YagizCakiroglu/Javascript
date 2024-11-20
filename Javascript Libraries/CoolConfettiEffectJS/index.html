@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Confetti Effect JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .button-wrapper {
+            text-align: center;
+        }
+
+        .confetti-button {
+            font-size: 18px;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .confetti-button:hover {
+            background-color: #0056b3;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-wrapper">
+        <button class="confetti-button">Kutla 🎉</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+        document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+            // Create a canvas element
+            let canvas = document.createElement("canvas");
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            let container = document.getElementsByClassName("button-wrapper")[0];
+            container.appendChild(canvas);
+
+            // Create confetti effect
+            let confetti_button = confetti.create(canvas);
+            confetti_button({
+                particleCount: 200,
+                spread: 200,
+                startVelocity: 15,
+                scalar: 0.9,
+                ticks: 90
+            }).then(() => {
+                // Remove the canvas after the confetti animation is done
+                setTimeout(() => container.removeChild(canvas), 1000);
+            });
+        });
+    </script>
+</body>
+</html>
