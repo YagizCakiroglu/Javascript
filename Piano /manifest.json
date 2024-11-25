@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Piano Extension",
+    "description": "A piano that you can play with your keyboard. Extension that we created in https://github.com/YagizCakiroglu",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "/images/icon16x.png",
+        "48": "/images/icon48x.png",
+        "128": "/images/icon128x.png"
+      }
+    },
+    "permissions": [],
+    "icons": {
+      "16": "/images/icon16x.png",
+      "48": "/images/icon48x.png",
+      "128": "/images/icon128x.png"
+    }
+  }
+  
